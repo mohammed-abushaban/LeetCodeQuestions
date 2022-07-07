@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class postorder {
+    List<Integer> result = new ArrayList<Integer>();
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.right = new TreeNode(2);
+        root.right.left = new TreeNode(3);
+    }
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+        postorderTrav(root);
+        return result;
+    }
+
+    public void postorderTrav(TreeNode n) {
+        if (n != null) {
+            postorderTrav(n.left);
+            postorderTrav(n.right);
+            result.add(n.val);
+        }
+    }
+}
