@@ -24,3 +24,41 @@ public class SearchMatrix {
         return false;
     }
 }
+/*
+ * for(int i = 0 , j = 0; i<matrix.length && j<matrix[i].length;)
+ * {
+ * if(matrix[i][matrix[i].length-1] >= target && matrix[i][j] <= target)
+ * {
+ * for(int k = 0; k<matrix[i].length; k++)
+ * {
+ * if(matrix[i][k] == target)
+ * return true;
+ * }
+ * return false;
+ * }
+ * else if(matrix[i][matrix[i].length-1] < target)
+ * {
+ * i++;
+ * }
+ * else
+ * return false;
+ * }
+ * return false;
+ */
+/*
+ * int row = 0;
+ * int col = matrix[0].length - 1;
+ * while(row < matrix.length && col >= 0) {
+ * int ele = matrix[row][col];
+ * if(ele == target) {
+ * return true;
+ * }
+ * if(ele > target) {
+ * col--;
+ * }
+ * else {
+ * row++;
+ * }
+ * }
+ * return false;
+ */
